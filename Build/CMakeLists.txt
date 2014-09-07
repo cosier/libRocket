@@ -9,7 +9,6 @@ cmake_minimum_required(VERSION 2.8.5)
 if(COMMAND cmake_policy)
   cmake_policy(SET CMP0015 NEW)
 endif(COMMAND cmake_policy)
-
 project(libRocket C CXX)
 
 # paths
@@ -37,6 +36,8 @@ include(TestForSTDNamespace)
 #===================================
 # Build options ====================
 #===================================
+
+set(CMAKE_CXX_FLAGS "-m64")
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING
